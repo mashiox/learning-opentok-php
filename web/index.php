@@ -63,7 +63,8 @@ $app->container->singleton('sessionId', function() use ($app) {
     }
 
     $session = $app->opentok->createSession(array(
-        'mediaMode' => MediaMode::ROUTED
+        'mediaMode' => MediaMode::ROUTED,
+	'location' => "134.147.64.11"
     ));
     $app->storage->store('sessionId', $session->getSessionId());
     return $session->getSessionId();
