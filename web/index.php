@@ -149,4 +149,8 @@ $app->post('/session/clear', function() use ($app) {
     }
 });
 
+$app->get('/test', 'cors', function(){
+	echo "Hola Mundo!";
+});
+
 $app->run();
